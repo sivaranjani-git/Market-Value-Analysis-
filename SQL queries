@@ -1,0 +1,9 @@
+-- Total Market Revenue
+SELECT SUM(purchase_amount) AS total_market_value
+FROM shopping_behavior;
+
+-- Top performing category
+SELECT category, SUM(purchase_amount) AS revenue
+FROM shopping_behavior
+GROUP BY category
+ORDER BY revenue DESC;
